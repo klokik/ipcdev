@@ -593,7 +593,7 @@ for (var i = 0; i < Build.targets.length; i++) {
 		    defs: "-D BENCHMARK -D DSP" + extraDefs
 		}).addObjects(["messageq_single.c"]);
 	} else if (platform.match(/^ti\.platforms\.sdp5430/) &&
-                (targ.isa == "M4")) {
+                (targ.isa == "v7M" || targ.isa == "v7M4")) {
 		Pkg.addExecutable(name + "/messageq_single", targ, platform, {
 		    cfgScript: "rpmsg_transport",
 		    defs: "-D BENCHMARK -D IPU" + extraDefs
