@@ -235,7 +235,24 @@ for (arg = 0; arg < arguments.length; arg++) {
 
     if (targetName.match(/elf\.C64T/)) {
         if (platform == 'OMAP54XX') {
+            /* target.platforms.$add("ti.platforms.sdp5430:DSP"); */
             target.platforms.$add("ti.platforms.sdp5430:DSP");
+        }
+    }
+
+    if (targetName.match(/elf\.M3$/)) {
+        switch (platform) {
+            case 'OMAP54XX':
+                target.platforms.$add("ti.platforms.sdp5430:IPU");
+                break;
+
+            case 'NONE':
+                /* okay, no platform specified */
+                break;
+
+            default:
+                print("Unknown M3 platform, skipping " + platform);
+                break;
         }
     }
 
