@@ -624,7 +624,7 @@ for (var i = 0; i < Build.targets.length; i++) {
                 "MxServer.c"];
 
         if (platform.match(/^ti\.platforms\.sdp5430/) &&
-                (targ.isa == "v7M4")) {
+                (targ.isa == "v7M" || targ.isa == "v7M4")) {
             Pkg.addExecutable(name + "/test_omx_ipu_omap5", targ, platform, {
                 cfgScript: "test_omx_ipu_omap5",
                 defs: "-D IPU -D OMAP5xxx -DRPMSG_NS_2_0"

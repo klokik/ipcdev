@@ -83,7 +83,7 @@ function getLibs(prog)
 function validate()
 {
     if (xdc.om.$name == "cfg") {
-        if (Program.build.target.isa.match(/v7M4/)) {
+        if (Program.build.target.isa.match(/v7M(|4)/)) {
             /* On Vayu's IPUs, VirtQueue only supports SMP BIOS */
             var BIOS = xdc.module('ti.sysbios.BIOS');
             if (!BIOS.smpEnabled) {

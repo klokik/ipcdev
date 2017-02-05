@@ -106,7 +106,7 @@ function getLibs(prog)
 function validate()
 {
     if (xdc.om.$name == "cfg") {
-        if (Program.build.target.isa.match(/v7M4/)) {
+        if (Program.build.target.isa.match(/v7M(|4)/)) {
             /* On OMAP5's IPU, only SMP BIOS is supported */
             var BIOS = xdc.module('ti.sysbios.BIOS');
             if (!BIOS.smpEnabled) {
