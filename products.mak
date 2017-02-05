@@ -66,7 +66,7 @@ TOOLCHAIN_PREFIX = $(TOOLCHAIN_INSTALL_DIR)/bin/$(TOOLCHAIN_LONGNAME)-
 
 # Path to Linux Kernel - needed to build the IPC user libraries
 #
-KERNEL_INSTALL_DIR =
+KERNEL_INSTALL_DIR = $(DEPOT)/kernel/ti-linux-kernel
 
 # Optional: Specify the Address Family for RPMSG. This value is specified
 # either from the Linux kernel specified by KERNEL_INSTALL_DIR above, or
@@ -76,7 +76,7 @@ AF_RPMSG =
 
 # Optional: Path to DRM Library
 #
-DRM_PREFIX =
+DRM_PREFIX = /mnt
 
 # Optional: Path to TI Linux Utils product
 #
