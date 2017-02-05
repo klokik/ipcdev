@@ -199,6 +199,42 @@ if (xdc.om.$name == "cfg" || typeof(genCdoc) != "undefined") {
                 ]
             },
         },
+        "ti.catalog.arm.cortexm3": {
+            "OMAP4430": {
+                "GPTimer3": {
+                    name: "WdTimer3Ipu",    /* GpTimer 3 */
+                    baseAddr: 0xA8034000,   /* Virtual address */
+                    clkCtrl: 0xAA009040,    /* Virtual address */
+                    intNum:  53,
+                    eventId: -1,
+                },
+                "GPTimer4": {
+                    name: "WdTimer4Ipu",    /* GpTimer 4 */
+                    baseAddr: 0xA8036000,   /* Virtual address */
+                    clkCtrl: 0xAA009048,    /* Virtual address */
+                    intNum:  54,
+                    eventId: -1,
+                },
+                "GPTimer9": {
+                    name: "WdTimer9Ipu",    /* GpTimer 9 */
+                    baseAddr: 0xA803E000,   /* Virtual address */
+                    clkCtrl: 0xAA009050,    /* Virtual address */
+                    intNum:  55,
+                    eventId: -1,
+                },
+                "GPTimer11": {
+                    name: "WdTimer11Ipu",   /* GpTimer 11 */
+                    baseAddr: 0xA8088000,   /* Virtual address */
+                    clkCtrl: 0xAA009030,    /* Virtual address */
+                    intNum:  56,
+                    eventId: -1,
+                },
+                "Default": [
+                    { name: "GPTimer9" },
+                    { name: "GPTimer11" },
+                ]
+            },
+        },
         "ti.catalog.arm.cortexm4": {
             "OMAP5430": {
                 "GPTimer3": {
