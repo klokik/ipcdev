@@ -37,7 +37,7 @@
 
 # Optional: recommended to install all dependent components in one folder.
 #
-DEPOT = _your_depot_folder_
+DEPOT = /opt/ti
 
 # Platform to build for
 #   Supported platforms (choose one):
@@ -46,22 +46,22 @@ DEPOT = _your_depot_folder_
 #
 # Note, this is used for Linux, QNX and BIOS builds
 #
-PLATFORM =
+PLATFORM = OMAP54XX
 
 # Destination when installing the built binaries
 #
 # Note, this is used for Linux (if you use ipc-linux.mak to run the
 # configure command), QNX and BIOS.
 #
-DESTDIR =
+DESTDIR = /usr
 
 
 #################### IPC Linux ####################
 
 # Set up required cross compiler path for IPC Linux configuration and build
 #
-TOOLCHAIN_LONGNAME = arm-none-linux-gnueabi
-TOOLCHAIN_INSTALL_DIR = $(DEPOT)/_your_arm_code_gen_install_
+TOOLCHAIN_LONGNAME = arm-linux-gnueabihf
+TOOLCHAIN_INSTALL_DIR = $(DEPOT)/toolchain/gcc-linaro
 TOOLCHAIN_PREFIX = $(TOOLCHAIN_INSTALL_DIR)/bin/$(TOOLCHAIN_LONGNAME)-
 
 # Path to Linux Kernel - needed to build the IPC user libraries
@@ -80,7 +80,7 @@ DRM_PREFIX =
 
 # Optional: Path to TI Linux Utils product
 #
-CMEM_INSTALL_DIR =
+CMEM_INSTALL_DIR = $(DEPOT)/linuxutils_4_10_01_02
 
 
 #################### IPC QNX ####################
@@ -97,8 +97,8 @@ QNX_CFLAGS =
 
 # Path to required dependencies for IPC BIOS builds
 #
-XDC_INSTALL_DIR = $(DEPOT)/_your_xdctools_install_
-BIOS_INSTALL_DIR = $(DEPOT)/_your_bios_install_
+XDC_INSTALL_DIR = $(DEPOT)/xdctools_3_32_01_22_core
+BIOS_INSTALL_DIR = $(DEPOT)/bios_6_46_04_53
 
 # Do you want to build SMP-enabled libraries (if supported for your target)?
 # Set to either 0 (disabled) or 1 (enabled)
@@ -109,7 +109,7 @@ BIOS_SMPENABLED=1
 #
 ti.targets.elf.C64P =
 ti.targets.elf.C64P_big_endian =
-ti.targets.elf.C64T =
+ti.targets.elf.C64T = $(DEPOT)/toolchain/c6000_7.4.20
 ti.targets.elf.C66 =
 ti.targets.elf.C66_big_endian =
 ti.targets.elf.C674 =
