@@ -98,7 +98,7 @@ QNX_CFLAGS =
 # Path to required dependencies for IPC BIOS builds
 #
 XDC_INSTALL_DIR = $(DEPOT)/xdctools_3_32_01_22_core
-BIOS_INSTALL_DIR = $(DEPOT)/bios_6_46_04_53
+BIOS_INSTALL_DIR = $(DEPOT)/bios_6_42_03_35
 
 # Do you want to build SMP-enabled libraries (if supported for your target)?
 # Set to either 0 (disabled) or 1 (enabled)
